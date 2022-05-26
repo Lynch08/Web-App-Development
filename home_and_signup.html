@@ -1,0 +1,174 @@
+<!--Main Hompage and Sign-up Popup-->
+<!--Code for Structure of homepage adapted from https://www.youtube.com/watch?v=r7TapFkrmmw&list=PLs1fqgQpnCmJ018jq-A3Ra9GrFWcPgOc1&index=2-->
+<!--Code for Sign-up Popup adapted from https://www.youtube.com/watch?v=Dn4_kkmeVqI&list=PLs1fqgQpnCmJY47kwBeZZcJ63ZpCJDLO8&index=4-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Web App Developmet Project</title>
+		<!--link to stylesheet for main body-->
+		<link rel = "stylesheet" href = "stylesForSecAtt.css"/>
+		<!--link to stylesheet for data validation pop-up-->
+		<link rel = "stylesheet" href = "modal.css"/>
+		<!--Google Fonts-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<!--Navigation Bar Section-->
+		<nav class="navbar">
+			<div class="navbar__container">
+				<a href = "home_and_signup.html" id="navbar__logo">Vote on the GOAT</a>
+				<div class="navbar__toggle" id="mobile-menu">
+					<span class="bar"></span><span class="bar"></span>
+					<span class="bar"></span>
+				</div>
+				<ul class="navbar__menu">
+					<li class="navbar__item">
+						<a href="home_and_signup.html" class="navbar__links">Home</a>
+					</li>
+					<li class="navbar__item">
+						<a href="merch.html" class="navbar__links">Merch Sales</a>
+					</li>
+					<li class="navbar__btn">
+						<a href="bar.html" class="button">See Results</a></li>
+				</ul>
+			</div>
+		</nav>
+	<!--Main Body-->
+	<div class="main">
+		<div class="main__container">
+			<div class="main__content">
+				<h1>TOP 50  GREATEST OF ALL TIME</h1>
+				<h2>Vote on the G.O.A.T</h2>
+				<p>Welcome To The Sports Jungle</p>
+				<button class="main__btn"><a>Register Here</a></button>
+			</div>
+			<div class="main__image--container">
+				<img src="images/goats.png" alt="pic" id="main__img"/>
+			</div>
+		</div>
+	</div>
+	<!--Services Section - Links to sponsers (Nike and NFL)-->
+	<div class="services">
+		<h1>See what the hype is about - Talk to our Sponsers</h1>
+		<div class="services__container">
+			<div class="services__card">
+				<h2>Be Prepared</h2>
+				<p>Just Do It!!!</p>
+				<button onclick="location.href='http://www.nike.com'" type="button">
+					Nike.com</button>
+			</div>
+			<div class="services__card">
+				<h2>Are you ready?</h2>
+				<p>Begin Your Journey With Our Sponser</p>
+				<button onclick="location.href='http://www.nfl.com'" type="button">
+					NFL.com</button>
+			</div>		
+		</div>
+	</div>
+
+	<!-- Footer Section -->
+	<div class="footer__container">
+		<div class="footer__links">
+			<div class="footer__link--wrapper">
+				<div class="footer__link--items">
+					<h2>About Us</h2>
+					<a href = "http://www.nfl.com">How it Works</a>
+					<a href = "http://www.nfl.com">Voting</a>
+					<a href = "http://www.nfl.com">Compitition</a>
+					<a href = "http://www.nfl.com">Sales and Savings</a>
+				</div>
+				<div class="footer__link--items">
+					<h2>Contact  Us</h2>
+					<a href = "goat.com">Contact</a>
+					<a href = "http://www.nfl.com">Support</a>
+					<a href = "http://www.nfl.com">Careers</a>
+					<a href = "http://www.nfl.com">Sales</a>
+					<a href = "http://www.nfl.com">Sponserships</a>
+				</div>
+			</div>
+			<div class="footer__link--wrapper">
+				<div class="footer__link--items">
+					<h2>Videos</h2>
+					<a href = "https://www.youtube.com">Watch</a>
+					<a href = "https://www.youtube.com">Submit</a>
+					<a href = "https://www.youtube.com">Agency</a>
+					<a href = "https://www.youtube.com">Influencer</a>
+				</div>
+				<div class="footer__link--items">
+					<h2>Social</h2>
+					<a href = "https://www.instagram.com">Instagram</a>
+					<a href = "https://www.facebook.com">Facebook</a>
+					<a href = "https://www.twitter.com">Twitter</a>
+					<a href = "https://www.youtube.com">YouTube</a>
+					<a href = "https://www.gov.ie">Terms of Service</a>
+				</div>
+			</div>
+		</div>
+		<!-- Footer Section - Links to SocialMedia-->
+		<div class="social__media">
+			<div class="social__media--wrap">
+				<div class="footer__logo">
+					<a href = "/" id="footer__logo">G.O.A.T</a>
+				</div>
+			<p class="website__rights">© G.O.A.T 2022. All Rights Reserved</p>
+				<div class="social__icons">
+				<a href="https://www.instagram.com" class="social_icon--link" target="_blank">
+					<i href="https://www.instagram.com" class="fa fa-instagram"></i>	
+				</a>
+				<a href="https://www.facebook.com" class="social_icon--link">
+					<i href="https://www.facebook.com" class="fa fa-facebook"></i>	
+				</a>
+				<a href="https://www.twitter.com" class="social_icon--link">
+					<i href="https://www.twitter.com" class="fa fa-twitter"></i>	
+				</a>
+				<a href="https://www.youtube.com" class="social_icon--link">
+					<i href="https://www.youtube.com" class="fa fa-youtube"></i>	
+				</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Popup Data Validation Section-->
+	<div class="modal" id="email-modal">
+		<div class="modal-content">
+			<span class="close__btn">&times:</span>
+			<div class="modal-content-left">
+				<!--svg image-->
+				<img id = "modal-img" src="images/sign_up.svg" alt="">
+			</div>
+			<div class="modal-content-right">
+				<!--Validation Form-->
+				<form action="/" method="GET" class="modal-form" id="form">
+					<h1>Get Started today - Please fill out the required information below</h1>
+					<div class="form-validation">
+						<input type="text" class="modal-input" id="forename" name="forename" placeholder="Enter Your Name">
+						<p>error</p>
+					</div>
+					<div class="form-validation">
+						<input type="email" class="modal-input" id="email" name="email" placeholder="Enter Your Email">
+						<p>error</p>
+					</div>
+					<div class="form-validation">
+						<input type="password" class="modal-input" id="password" name="password" placeholder="Enter Your Password">
+						<p>error</p>
+					</div>
+					<div class="form-validation">
+						<input type="password" class= "modal-input" id="password-confirm" name="password" placeholder="Confirm Password">
+						<p>error</p>
+					</div>
+					<input type="submit" class="modal-input-btn" value="Sign Up">
+					<span class="modal-input-login">Already have an account? Login <a href="#">here</a></span>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!--link to Java script for main body-->
+	<script src="app.js"></script>
+	</body>
+</html>
+

@@ -1,0 +1,79 @@
+/* Login Styling page*/
+/* code adapted from https://www.youtube.com/watch?v=xJVPydZNA14 */
+
+/* body and background*/
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: url(images/goats.jpg);
+    background-size: cover;
+}
+
+/* login details box*/
+.box{
+    width: 300px;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+/* login text title*/
+.box h1 {
+    color: aquamarine;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+/* login details input boxes*/
+.box input[type="text"], .box input[type="password"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid rgba(0, 162, 255, 0.637);
+    padding: 14px 10px;
+    width: 220px;
+    outline: none;
+    color: #fff;
+    border-radius: 24px;
+    transition: 0.25px;
+    font-weight: 900;
+    
+}
+
+/*placeholder details in input boxes*/
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(33, 179, 70);
+    opacity: 1; 
+  }
+  /*input boxes for login details*/
+.box input[type="text"]:focus, .box input[type="password"]:focus {
+    width: 270px;
+    border-color: rgb(216, 103, 103);
+}
+
+ /*button to validate login detais input*/
+.box input[type="submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid rgb(216, 103, 103);
+    padding: 14px 35px;
+    outline: none;
+    color: #fff;
+    border-radius: 24px;
+    transition: 0.25px;
+    cursor: pointer;
+}
+
+ /*hover features for button to validate login detais input*/
+.box input[type="submit"]:hover {
+    background: rgb(216, 103, 103);
+}

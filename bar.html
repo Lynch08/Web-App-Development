@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>D3 Barchart</title>
+    <link rel = "stylesheet" href = "bar.css"/>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <!-- navigation bar -->
+	<nav class="navbar">
+        <div class="navbar__container">
+            <a href = "home_and_signup.html" id="navbar__logo">Vote on the GOAT</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span><span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="home_and_signup.html" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="merch.html" class="navbar__links">Merch Sales</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="bar.html" class="button">See Results</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Dropdown -->
+    <h3>Select Chart Size</h3>
+    <select id = "chartHeight">
+        <option value="400">Small</option>
+        <option value="600">Medium</option>
+        <option value="1000">Large</option>
+
+    </select>
+    
+    <!-- Add color buttons -->
+    <h3>Colour Of Your Favourite Players Gear:</h3> <input type="color" id="colorPicker">
+    
+    <!-- Button to call funtion to generate barchart -->
+    <h3><button onclick = "drawChart()">Show Vote Tally</button></h3>
+    
+    <div style="text-align: center;" id="caption">
+        <h1>Time For The Count To Begin!!</h1>
+        <div id="d3-container"></div>
+    </div>
+    <script src="d3.js"></script>
+</body>
+</html>

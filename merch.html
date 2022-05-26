@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>rect:hover{fill:black} </style>
+    <meta charset="UTF-8">
+    <title>Merchandise By GOAT</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    	<!--link to stylesheet for main body-->
+	<link rel = "stylesheet" href = "merch.css"/>
+</head>
+<body>
+    
+    
+    <!--Navigation Bar Section-->
+	<nav class="navbar">
+        <div class="navbar__container">
+            <a href = "home_and_signup.html" id="navbar__logo">Vote on the GOAT</a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span><span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="home_and_signup.html" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="merch.html" class="navbar__links">Merch Sales</a>
+                </li>
+                <li class="navbar__btn">
+                    <a href="bar.html" class="button">See Results</a></li>
+            </ul>
+        </div>
+    </nav>
+        <!--Heading under navigation bar-->
+        <h1 id="heading"> WHERE YOUR GOAT RANKS IN MERCHANDISING - SINCE JAN 1st 2020</h1>
+        <div id="myDiv"></div>
+</body>
+<!--JavaScript-->
+<script>
+d3.csv("merch.csv").then(function (data){
+    console.log(data);
+// svg containger attributes
+    let svgContainer = d3.select("#myDiv").append("svg")
+        .attr("width", 800)
+        .attr("height", 800)
+// myRecta attributes - bar chart generation
+    let myRecta = svgContainer.selectAll("rect")
+        .data(data);
+
+    myRecta.enter()
+        .append("rect")
+            .attr("fill", "black")
+            .attr("x", function (d, i){
+                return 50 + (i*62)
+            })
+            .transition()
+            .duration(2000)
+            .attr("x", function (d, i){
+                return 50 + (i*62)
+            })
+            .attr("y", function (d){
+                return 500 - d.Merch/1000000;
+            })
+            .attr("width", 60)
+            .attr("height", function (d){
+                return d.Merch / 1000000;
+            })
+            .attr("fill", function (d){
+                if (d.Merch <= 50000000) return "red";
+                else if (d.Merch <= 150000000) return "blue";
+                else {return "green"}
+            });
+// mylabel attributes - bar chart label generation
+    let mylabel = svgContainer.selectAll("text")
+        .data(data);
+    
+    mylabel.enter()
+        .append("text")
+        // Start of first label transition
+            .attr("x", function (d, i){
+                return 50 + (i*62)
+            })
+            .attr("y", 500)
+            // Transition Settings
+            .transition()
+            .duration(3000)
+            .delay(1500)
+            .ease(d3.easeBounceOut)
+            
+            // Start of Second Transition for lables
+            .attr("x", function (d, i){
+                return 50 + (i*62)
+            })
+            .attr("y", function (d){
+                return 515 - d.Merch/1000000
+            })
+            .attr("font-family", "sans-serif")
+            .attr("fill", "white")
+            .text(function(d){
+                return (d.Merch /1000000).toFixed(1) + "m"     
+            })
+
+            // Transition Settings
+            .transition()
+            .duration(3000)
+            .delay(500)
+            .ease(d3.easeBounceOut)
+            
+            // End of Transition for lables
+            .attr("x", function (d, i){
+                return 50 + (i*62)
+            })
+            .attr("y", function (d){
+                return 515 - d.Merch/1000000
+            })
+            .attr("font-family", "sans-serif")
+            .attr("font-size", "10px")
+            .attr("fill", "yellow")
+            .attr("font-weight", 800)
+            .text(function(d){
+                return (d.Country + '\n' + (d.Merch /1000000).toFixed(1) + "m");
+                 
+            })
+            
+
+ 
+        
+
+})
+
+
+</script>
+
+</html>

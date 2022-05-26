@@ -1,0 +1,110 @@
+
+/*Attributes for body tag */
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: url(images/pitch.PNG);
+    background-size: cover;
+}
+/*Navigation bar class */
+.navbar {
+	background: #131313;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.2rem;
+	position: sticky;
+	top: 0;
+	z-index: 999;
+}
+/*structure of navigation bar*/
+.navbar__container {
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	z-index: 1;
+	width: 100%;
+	max-width: 1300px;
+	margin: 0 auto;
+	padding: 0 50px;
+}
+/*Navigation bar logo - not really used*/
+#navbar__logo {
+	background-color: #ff8177;
+	background-clip: text;
+	/*background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%');*/
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	text-decoration: none;
+	font-size: 2rem;
+}
+
+/* For Social Media Icons in footers */
+.fa-gem {
+	margin-right: .05rem;
+}
+
+/* Navigation Bar Class for unorderd list - all items */
+.navbar__menu {
+	display: flex;
+	align-items: center;
+	list-style: none;
+	text-align: center;
+}
+
+/* Navigation Bar Class for list items */
+.navbar__item {
+	height: 80px;
+}
+
+/* Navigation Bar Class for links */
+.navbar__links {
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	padding: 0 1rem;
+	height: 100%;
+}
+
+/* Navigation Bar Class for button - will bring you to page with plot */
+.navbar__btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 1rem;
+	width: 100%;
+}
+/* Navigation Bar Class for button - will bring you to page with plot */
+.button {
+	display: flex;
+	justify-content: center;
+	text-decoration: none;
+	padding: 12px 24px;
+	height: 100%;
+	width: 100%;
+	border: none;
+	outline: none;
+	border-radius: 4px;
+	background: #f77062;
+	color: #fff;
+
+}
+/* hover attributes for navbar button class*/
+.button:hover {
+	background: #4837ff;
+	transition: all .03s ease;
+}
+/* hover attributes for navbar links class*/
+.navbar__links:hover {
+	color: #f77062;
+	transition: all .03s ease;
+}

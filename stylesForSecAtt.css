@@ -1,0 +1,462 @@
+/* Stylesheet for navigation bar, homepage */
+/* root */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Kumbh Sans', sans-serif;
+}
+/*Navigation bar class */
+.navbar {
+	background: #131313;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.2rem;
+	position: sticky;
+	top: 0;
+	z-index: 999;
+}
+/*structure of navigation bar*/
+.navbar__container {
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	z-index: 1;
+	width: 100%;
+	max-width: 1300px;
+	margin: 0 auto;
+	padding: 0 50px;
+}
+/*Navigation bar logo - not really used*/
+#navbar__logo {
+	background-color: #ff8177;
+	background-clip: text;
+	/*background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%');*/
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	text-decoration: none;
+	font-size: 2rem;
+}
+
+/* For Social Media Icons in footers */
+.fa-gem {
+	margin-right: .05rem;
+}
+
+/* Navigation Bar Class for unorderd list - all items */
+.navbar__menu {
+	display: flex;
+	align-items: center;
+	list-style: none;
+	text-align: center;
+}
+
+/* Navigation Bar Class for list items */
+.navbar__item {
+	height: 80px;
+}
+
+/* Navigation Bar Class for links */
+.navbar__links {
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	padding: 0 1rem;
+	height: 100%;
+}
+
+/* Navigation Bar Class for button - will bring you to page with plot */
+.navbar__btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 1rem;
+	width: 100%;
+}
+/* Navigation Bar Class for button - will bring you to page with plot */
+.button {
+	display: flex;
+	justify-content: center;
+	text-decoration: none;
+	padding: 12px 24px;
+	height: 100%;
+	width: 100%;
+	border: none;
+	outline: none;
+	border-radius: 4px;
+	background: #f77062;
+	color: #fff;
+
+}
+/* hover attributes for navbar button class*/
+.button:hover {
+	background: #4837ff;
+	transition: all .03s ease;
+}
+/* hover attributes for navbar links class*/
+.navbar__links:hover {
+	color: #f77062;
+	transition: all .03s ease;
+}
+
+
+/* Sponsers cards section CSS */
+/* background colour for main body of page*/
+.main {
+	background-color: #141414;
+}
+/* attributs for main__container class */
+.main__container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	justify-self: center;
+	margin: 0 auto;
+	height: 90vh;
+	background-color: #141414;
+	z-index: 1;
+	width: 100%;
+	max-width: 1300px;
+	padding: 0 50px;
+}
+
+/* attributs for main__content class h1 tags*/
+.main__content h1 {
+	font-size: 4rem;
+	background-color: #ff8177;
+	background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+	background-size: 100%;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+}
+
+/* attributs for main__content class h2 tags*/
+.main__content h2 {
+	font-size: 64px;
+	background-color: #ff8177;
+	background-image: linear-gradient(to top, #b721ff 0%, #21d4fd 100%);
+	background-size: 100%;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+}
+
+/* attributs for main__content class p tags*/
+.main__content p {
+	margin-top: 16px;
+	font-size: 32px;
+	font-weight: 700;
+	color: #fff;
+}
+
+/* attributs for main__btn class*/
+.main__btn {
+	font-size: 12px;
+	background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+	padding: 18px 36px;
+	border: none;
+	border-radius: 4px;
+	color: #fff;
+	margin-top: 2rem;
+	cursor: pointer;
+	position: relative;
+	transition: all 0.4s;
+	outline: none;
+}
+
+/* for hover effect over button*/
+.main__btn a {
+	position: relative;
+	z-index: 2;
+	color: #fff;
+	text-decoration: none;
+}
+
+/* for effect after button clicked*/
+.main__btn:after {
+	position:absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background: #4837ff;
+	transition: all 0.4s;
+	border-radius: 4px;
+}
+/* for hover effect over button*/
+.main__btn:hover {
+	color: #fff;
+}
+/* for hover effect over button*/
+.main__btn:hover:after{
+	width: 100%;
+}
+
+/* position main image*/
+.main__img--container {
+	text-align:center;
+}
+/* main image size*/
+#main__img {
+	height: 120%;
+	width: 120%;
+}
+
+/* for mobile responsiveness - not working*/
+@media screen and (max-width:768px) {
+	.main__container{
+		display: grid;
+		grid-template-columns: auto;
+		align-items: center;
+		justify-self: center;
+		width: 100%;
+		margin: 0 auto;
+		height: 90vh;
+
+	}
+
+.main__content {
+	text-align: center;
+	margin-bottom: 64px;	
+	}
+
+.main__content h1 {
+	font-size: 40px;
+	margin-top: 32px;
+	}
+
+.main__content h2 {
+	font-size: 36px;
+	}
+
+.main__content p {
+	font-size: 24px;
+	}
+}
+
+
+/* Services/Sponsers Section CSS */
+.services {
+	background: #141414;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+}
+
+/* Attributes for Services/Sponsers Section CSS h1 tags */
+.services h1{
+	background-color: #ff8177;
+	background-image: linear-gradient(to right, #ff8177 0%,
+	#ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b1285b 100% );
+	background-size: 100%;
+	margin-bottom: 90px;
+	font-size: 30px;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+}
+
+/* services__container class Attributes for Services/Sponsers Section */
+.services__container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+/* services__card class Attributes for Services/Sponsers Section 1st card*/
+.services__card {
+	margin: 1rem;
+	height: 525px;
+	width: 400px;
+	border-radius: 4px;
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(17,17,17,0.6) 100%), url(images/serena.png);
+	background-size: cover;
+	position: relative;
+	color: #fff;
+}
+
+/* services__card class Attributes for Services/Sponsers Section 2nd card*/
+.services__card:nth-child(2) {
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%,
+	rgba(17,17,17,0.6) 100%), url(images/brady.PNG);
+}
+
+/* Attributes for Services/Sponsers Section CSS h2 tags */
+.services h2 {
+	position:absolute;
+	top: 350px;
+	left: 30px;
+}
+
+/* Attributes for Services/Sponsers Section CSS p tags */
+.services__card p {
+	position: absolute;
+	top: 400px;
+	left: 30px;
+}
+/* services__card class Attributes for Services/Sponsers Section CSS */
+.services__card button {
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	outline: none;
+	border-radius: 4px;
+	background: #f77062;
+	position: absolute;
+	top: 440px;
+	left: 30px;
+	font-size: 16;
+	left: 30px;
+	cursor: pointer;
+}
+
+/* services__card class Attributes when hover*/
+.services__card:hover {
+	transform: scale(1.075);
+	transition: 0.2s ease-in;
+	cursor: pointer;
+}
+
+
+
+/* Footer CSS */
+/* footer__container attributes Footer CSS */
+.footer__container {
+	background-color: #141414;
+	padding: 60px 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/* footer__container attributes Footer logo id */
+#footer__logo {
+	color: #fff;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	text-decoration: none;
+	font-size: 32px;
+}
+
+/* footer__links class attributes  */
+.footer__links {
+	width: 100%;
+	max-width: 1000px;
+	display: flex;
+	justify-content: center;
+}
+
+/* footer__link-wrapper class attributes (all footer data)  */
+.footer__link--wrapper{
+	display: flex;
+}
+
+/* footer__link--items class attributes (individual items)  */
+.footer__link--items {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin: 16px;
+	text-align: left;
+	width: 160px;
+	box-sizing: border-box;
+}
+
+/* footer__link--items class attributes h2 tags  */
+.footer__link--items h2 {
+	margin-bottom: 16px;
+}
+/* footer__link--items class attributes > h2 tags  */
+.footer__link--items > h2 {
+	color: #fff;
+}
+
+/* footer__link--items class attributes a tags  */
+.footer__link--items a {
+	color: #fff;
+	text-decoration: none;
+	margin-bottom: 8px;
+}
+
+/* footer__link--items class attributes a tags  */
+.footer__link--items a {
+	color: #fff;
+	margin-bottom: 8px;
+}
+
+/* footer__link--items class attributes a tags when mouse is hovering  */
+.footer__link--items a:hover {
+	color: #1391a1;
+	transition: 0.5s ease-out;
+}
+
+/* Social Links */
+/* social_icon--link class attributes for social media icons - class in a tags */
+.social_icon--link{
+	color: #fff;
+	font-size: 24px;
+}
+
+.social_media {
+	max-width: 1000px;
+	width: 100%;
+}
+/* social_media--wrap class attributes for social media icons  */
+.social_media--wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 90%;
+	max-width: 1000px;
+	margin: 40 auto 0 auto;
+}
+
+.social__icons {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 240px;
+}
+/* social_logo class attributes for social media icons  */
+.social__logo {
+	color: #fff;
+	justify-self: flex-start;
+	margin-left: 20px;
+	cursor: pointer;
+	text-decoration: none;
+	font-size: 32px;
+	display: flex;
+	margin-bottom: 16px;
+}
+
+/* text colour for website__rights class */
+.website__rights{
+	color: #fff;
+}
+
+#heading h1{
+    width: 400px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
